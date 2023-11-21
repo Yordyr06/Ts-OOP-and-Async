@@ -1,13 +1,9 @@
 export class MyDate {
-  private year: number;
-  private month: number;
-  private day: number;
-
-  constructor(year: number, month: number, day: number) {
-    this.year = year;
-    this.month = month;
-    this.day = day;
-  };
+  constructor(
+      private year: number,
+      private month: number,
+      private day: number
+    ) {};
 
   getDay() {
     return this.day;
@@ -37,8 +33,3 @@ export class MyDate {
     return `${day} / ${month} / ${this.year}`
   };
 };
-
-const myDate = new MyDate(1996, 9, 6);
-myDate.add(5, 'days');
-// console.log(myDate.day = 8)
-console.log(myDate.getDay());
