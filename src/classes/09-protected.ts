@@ -8,6 +8,10 @@ export class Animal {
   greeting() {
     return `Hello I'm ${this.name}`
   }
+
+  protected doSomething() {
+    console.log('doing something')
+  }
 }
 
 export class Dog extends Animal {
@@ -22,6 +26,13 @@ export class Dog extends Animal {
     for (let index = 0; index < times; index++) {
       console.log("woof");
     }
+
+    this.doSomething()
+  }
+
+  move() {
+    console.log('moving as a dog');
+    super.move();
   }
 };
 
